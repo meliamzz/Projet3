@@ -1,0 +1,45 @@
+.footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 0;
+    background-color: $bgcolor-primary;
+    justify-content: space-between;
+    border-top: solid 2px $border;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    @include mobile-only {
+    font-size: 1em;
+    }
+    &__mentions {
+        &--link {
+            color: $color-primary;
+            padding-left: 10px;
+        }
+    }
+    &__contact {
+        &--link {
+            color: $color-primary;
+            padding-right: 10px;
+        }
+    }
+    &--wiggle {
+    &:hover {
+    display: inline-block;
+    animation: wiggle 4s infinite;
+    }
+    
+    }
+}
+
+@keyframes wiggle {
+    0% {transform: rotate(0deg);}
+    3% {transform: rotate(-5deg);}
+    5% {transform: rotate(5deg);}
+    7% {transform: rotate(-5deg);}
+    9% {transform: rotate(5deg);}
+    11% {transform: rotate(0deg);}
+    100% {transform: rotate(0deg);}
+}
+

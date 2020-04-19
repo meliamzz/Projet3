@@ -1,0 +1,67 @@
+.soon {
+    display: flex;
+    width: 300px;
+    margin: auto;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 120px;
+    background-color: $bgcolor-primary;
+    color: $color-primary;
+    &__title {
+        margin: 0;
+        padding: 10px 20px;
+    }
+    &__dot {
+        font-size: 3em;
+        line-height: 10px;
+        padding-top: 13px;
+        &--dot1 {
+            animation: soon-dot1 2s infinite;  
+        }
+        &--dot2 {
+            animation: soon-dot2 2s infinite;  
+        }
+        &--dot3 {
+            animation: soon-dot3 2s infinite;
+        }       
+    }
+}
+
+@keyframes soon-dot1 {
+    0% {
+    opacity: 1;
+    }
+
+    90% {
+    opacity: 0;
+    }
+  }
+@keyframes soon-dot2 {
+    0% {
+    opacity: 0;
+    }
+    30% {
+    opacity: 1;
+    }
+    90%{
+    opacity: 0;
+    }
+    100% {
+    opacity:0;
+    }
+  }
+@keyframes soon-dot3 {
+    0% {
+    opacity: 0;
+    }
+    60% {
+    opacity: 1;
+    }
+    90% {
+    opacity:0;
+    }
+    100% {
+    opacity:0;
+    }
+  }

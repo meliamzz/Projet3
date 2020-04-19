@@ -1,0 +1,36 @@
+@import "../Utils/mixins";
+@import "../Utils/variables";
+@import "../Layouts/header";
+@import "../Layouts/footer";
+@import "../Layouts/forms";
+@import "../Pages/menu1footer";
+
+main h1 {
+  font-family: 'roboto';
+  padding-bottom: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.menu1 {
+  $params: map-get($menuParams, menu1);
+  @include menu-block($params);
+}
+
+.menu2 {
+  $params: map-get($menuParams, menu2);
+  @include menu-block($params);
+}
+
+.menu3 {
+  $params: map-get($menuParams, menu3);
+  @include menu-block($params);
+}
+
+.menu4 {
+  $params: map-get($menuParams, menu4);
+  @include menu-block($params);
+}

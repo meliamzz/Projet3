@@ -1,0 +1,28 @@
+@import "./Utils/mixins";
+@import "./utils/variables";
+@import "./Layouts/footer";
+@import "./Layouts/header";
+@import "./Layouts/forms";
+@import "./Components/btn-soon";
+@import "./Pages/accueil";
+
+
+.menu1 {
+	$params: map-get($menuParams, menu1);
+	@include menu-accueil($params);
+}
+
+.menu2 {
+	$params: map-get($menuParams, menu2);
+	@include menu-accueil($params);
+}
+
+.menu3 {
+	$params: map-get($menuParams, menu3);
+	@include menu-accueil($params);
+}
+
+.menu4 {
+	$params: map-get($menuParams, menu4);
+	@include menu-accueil($params);
+}
