@@ -4,37 +4,26 @@ $color-primary: #FDCB46;
 $border: #A1C181;
 $color-box-shadow: #F2F2F2;
 
-
-
 $menu1-color : #3C1218;
-$menu1-color-gradient: $menu1-color 0% 100%;
-
 
 $menu2-color: #C67413;
 $menu2-color-secondary: #A56699;
 $menu2-color-tertiary: #6e4ccc;
-$menu2-color-gradient: linear-gradient($menu2-color 25%, $menu2-color-tertiary 50%);
-
-
 
 $menu3-color: #0887FB;
-$menu3-color-secondary: #0228DD;
-$menu3-color-tertiary: #89C7F5;
-$menu3-color-gradient: $menu3-color-secondary, $menu3-color, $menu3-color-tertiary;
-
+$menu3-color-light: #0228DD;
+$menu3-color-dark: #89C7F5;
 
 $menu4-color: #72BF56;
-$menu4-color-secondary: #3D9339;
-$menu4-color-tertiary: #BFFF7E;
-$menu4-color-gradient: $menu4-color-secondary 20%, $menu4-color, $menu4-color-tertiary 50%;
+$menu4-color-dark: #3D9339;
+$menu4-color-light: #BFFF7E;
 
-//FONT-FAMILY
 
-$menu1-font-primary: 'Devonshire', cursive;
-$menu2-font-primary: 'Croissant One', cursive;
-$menu2-font-secondary: 'IBM Plex Serif', serif;
-$menu3-font-primary: 'Dancing Script', cursive;
-$menu4-font-primary: 'Kaushan Script', cursive;
+$menu1-font-primary: 'Devonshire', cursive, arial, sans-serif;
+$menu2-font-primary: 'Croissant One', cursive, arial, sans-serif;
+$menu2-font-secondary: 'IBM Plex Serif', serif, arial, sans-serif;
+$menu3-font-primary: 'Dancing Script', cursive, arial, sans-serif;
+$menu4-font-primary: 'Kaushan Script', cursive, arial, sans-serif;
 $font-secondary:'Kalam', cursive;
 
 
@@ -44,89 +33,103 @@ $menuParams: (
 	menu1: (
 		bgcolor: #FCDFDB,
 		color: $menu1-color,
-		color-menu: $menu1-color,
+		color-menu-course: $menu1-color,
 		color-gradient: $menu1-color 0% 100%,
+
 		font-primary: $menu1-font-primary,
 		font-secondary: $font-secondary,
-		font-size-primary: 2em,
-		font-size-secondary: 0.9em,
-		font-size-tertiary: 0.9em,
-		font-size-price: 1.2em,
-		font-size-menu-accueil: 2.3em,
+
+		font-size-accueil-primary: 2.3em,
+		font-size-accueil-secondary: 2.5em,
+		font-size-menu-restaurant: 2.3em,
+		font-size-menu-course: 1.1em,
+		font-size-menu-food: 0.9em,
+		font-size-menu-price: 1.2em,
+
 		padding-top-accueil: 120px,
-		padding-menu: 0 30px,
-		padding-bottom-resto: 20px,
-		padding-top-resto: 0,
-		padding-list: 10px 0 25px 0,
-		padding-top-line: 10px,
-		padding-food: 2px 0
+		padding-menu-block: 0 30px,
+		padding-bottom-menu-resto: 20px,
+		padding-top-menu-resto: 0,
+		padding-menu-list: 10px 0 25px 0,
+		padding-top-menu-line: 10px,
+		padding-menu-food: 2px 0
 		),
 
 
 
 	menu2: (
 		bgcolor: #FFF5FE,
-		color: #C67413,
-		color-menu: #C67413,
-		color-maincourse: #A56699,
-		color-dessert: #6e4ccc,
-		color-gradient: -webkit-linear-gradient(45deg, #C67413 30%, #6e4ccc 60%),
+		color: $menu2-color,
+		color-menu-course: $menu2-color,
+		color-maincourse: $menu2-color-secondary,
+		color-dessert: $menu2-color-tertiary,
+		color-gradient: -webkit-linear-gradient(45deg, $menu2-color 30%, $menu2-color-tertiary 60%),
+
 		font-primary: $menu2-font-primary,
 		font-secondary: $menu2-font-secondary,
-		font-size-primary: 1.5em,
-		font-size-secondary: 0.8em bold, 
-		font-size-tertiary: 0.8em,
-		font-size-price: 1.1em,
-		font-size-menu-accueil: 1.4em,
+
+		font-size-accueil-primary: 1.4em,
+		font-size-accueil-secondary: 2em,
+		font-size-menu-restaurant: 1.4em,
+		font-size-menu-course: 0.8em bold,
+		font-size-menu-food: 0.8em,
+		font-size-menu-price: 1.1em,
+
 		padding-top-accueil: 180px,
-		padding-bottom-resto: 60px,
-		padding-top-resto: 40px,
-		padding-list: 20px 40px 30px 40px,
-		padding-top-line: 8px,
+		padding-bottom-menu-resto: 60px,
+		padding-top-menu-resto: 40px,
+		padding-menu-list: 20px 40px 30px 40px,
+		padding-top-menu-line: 8px,
 		letter-spacing: 1px,
-		padding-food: 7px 0
+		padding-menu-food: 7px 0,
 		),
 
 	menu3: (
 		bgcolor: #EDEFEF,
-		color: #0887FB,
-		color-menu: black,
-		color-gradient: -webkit-linear-gradient(45deg, #0228DD 20%, #0887FB, #89C7F5 50%),
+		color: $menu3-color,
+		color-menu-course: black,
+		color-gradient: -webkit-linear-gradient(45deg, $menu3-color-light 20%, $menu3-color, $menu3-color-dark 50%),
+
 		font-primary: $menu3-font-primary, 
 		font-secondary: $font-secondary,
-		font-size-primary: 2.5em,
-		font-size-secondary: 0.7em,
-		font-size-tertiary: 0.8em,
-		font-size-price: 1.2em,
-		font-size-menu-accueil: 2em,
+
+		font-size-accueil-primary: 2em,
+		font-size-accueil-secondary: 2.5em,
+		font-size-menu-restaurant: 2.5em,
+		font-size-menu-course: 1.1em,
+		font-size-menu-food: 0.8em,
+		font-size-menu-price: 1.2em,
+
 		padding-top-accueil: 180px,
-		padding-bottom-resto: 50px,
-		padding-top-resto: 20px,
-		padding-list: 10px 30px 25px 30px,
-		padding-top-line: 10px,
-		padding-food: 5px 0
+		padding-bottom-menu-resto: 50px,
+		padding-top-menu-resto: 20px,
+		padding-menu-list: 10px 30px 25px 30px,
+		padding-top-menu-line: 10px,
+		padding-menu-food: 5px 0
 		),
 
 	menu4: (
 		bgcolor: #FDFFFD,
-		color: #72BF56,
-		color-menu: black,
-		color-secondary: #3D9339,
-		color-tertiary: #BFFF7E,
-		color-gradient: -webkit-linear-gradient(45deg, #3D9339 20%, #72BF56, #BFFF7E 50%),
+		color: $menu4-color,
+		color-menu-course: black,
+		color-gradient: -webkit-linear-gradient(45deg, $menu4-color-dark 20%, $menu4-color, $menu4-color-light 50%),
+
 		font-primary: $menu4-font-primary,
 		font-secondary: $font-secondary,
-		font-size-primary: 2.5em,
-		font-size-secondary: 0.7em,
-		font-size-tertiary: 0.8em,
-		font-size-price: 1.2em,
-		font-size-menu-accueil: 2em,
+
+		font-size-accueil-primary: 2em,
+		font-size-accueil-secondary: 2.5em,
+		font-size-menu-restaurant: 2.5em,
+		font-size-menu-course: 1.1em,
+		font-size-menu-food: 0.8em,
+		font-size-menu-price: 1.2em,
+
 		padding-top-accueil: 180px,
-		padding-bottom-resto: 50px,
-		padding-top-resto: 20px,
-		padding-list: 10px 30px 25px 30px,
-		padding-top-line: 10px,
-		padding-food: 5px 0
+		padding-bottom-menu-resto: 50px,
+		padding-top-menu-resto: 20px,
+		padding-menu-list: 10px 30px 25px 30px,
+		padding-top-menu-line: 10px,
+		padding-menu-food: 5px 0
 		)
 	);
 

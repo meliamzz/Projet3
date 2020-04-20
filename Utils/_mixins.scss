@@ -1,96 +1,3 @@
-// MENUS //
-
-@mixin menu-block($params) {
-	section {
-		width: 500px;
-		height: 700px;
-		box-shadow: 5px 5px 5px $color-box-shadow , -5px -5px 5px $color-box-shadow;
-		background-color: map-get($params, bgcolor);
-		margin: auto;
-		margin-bottom: 100px;
-		padding: 30px 20px;	
-	}
-
-	.restaurant {
-		font-family: map-get($params, font-primary);
-		font-size: map-get($params, font-size-primary);
-		background: map-get($params, color-gradient);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-		padding-bottom: map-get($params, padding-bottom-resto);
-		padding-top: map-get($params, padding-top-resto);
-
-	}
-
-	
-	.menu {
-		font-family: map-get($params, font-secondary);
-		color: map-get($params, color-menu);
-		margin: 20px, 0;
-		padding: map-get($params, padding-menu);
-		&--starter {
-			color: map-get($params, color-starter);
-		}
-		&--maincourse {
-			color: map-get($params, color-maincourse);
-		}
-		&--dessert {
-			color: map-get($params, color-dessert);
-		}
-		&__title {
-			font: map-get($params, font-size-secondary);
-			letter-spacing: map-get($params, letter-spacing);
-			display: flex;
-			justify-content: space-between;
-			::after {
-				content: "";
-  				display: block;
-  				height: 3px;
-  				width: 0;
-  				transition: width 1s ease;
-			}
-			:hover::after {
-  				width: 100%;
-  				background: map-get($params, color-gradient);
-			}
-			&--line {
-				padding-top: map-get($params, padding-top-line);
-				width: 150px;
-				height: 7px;
-			}
-		}
-		&__list {
-			padding: map-get($params, padding-list);
-			&--food {
-				display: flex;
-				justify-content: space-between;
-				padding: map-get($params, padding-food);
-				font-size: map-get($params, font-size-tertiary);
-					p:nth-child(2){
-					font-size: map-get($params, font-size-price);
-					font-weight: bold;
-					}		
-			}
-		}
-	}
-
-	.restaurantmini{
-		font-family: map-get($params, font-primary);
-		color: map-get($params, color);
-		display: flex;
-		justify-content: center;
-		&--icone{
-			width: 40px;
-			height: 40px;
-		}
-		&--title{
-			padding-left: 10px;
-			font-size: 1.8em;
-		}
-	}
-}
-
-
 @mixin menu-accueil($params) {
 	.menu {
     	width: 330px;
@@ -99,10 +6,15 @@
     	display: inline-block;
     	margin: 25px;
     	background-color: map-get($params, bgcolor);
+    	@include mobile-only {
+    		width: 200px;
+    		height: 280px;
+    	}
     	&__heading {
+
         	&--primary {
             	font-family: map-get($params, font-primary);
-            	font-size: map-get($params,font-size-menu-accueil);
+            	font-size: map-get($params,font-size-accueil-primary);
             	background: map-get($params, color-gradient);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -111,7 +23,7 @@
         	}
         	&--secondary {
             	font-family: map-get($params, font-secondary);
-            	font-size: map-get($params, font-size-primary);
+            	font-size: map-get($params, font-size-accueil-secondary);
             	color: map-get($params,color);
             	margin: 20px, 0;
         	}
@@ -128,18 +40,101 @@
         	width: 50px;
     	}
 	}
-
 }
 
 
-/////////////////////////////////////////////////////////
 
 
+@mixin menu-block($params) {
+	section {
+		width: 500px;
+		height: 700px;
+		box-shadow: 5px 5px 5px $color-box-shadow , -5px -5px 5px $color-box-shadow;
+		background-color: map-get($params, bgcolor);
+		margin: auto;
+		margin-bottom: 100px;
+		padding: 30px 20px;	
+	}
 
+	.restaurant {
+		font-family: map-get($params, font-primary);
+		font-size: map-get($params, font-size-menu-restaurant);
+		background: map-get($params, color-gradient);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+		padding-bottom: map-get($params, padding-bottom-menu-resto);
+		padding-top: map-get($params, padding-top-menu-resto);
+	}
 
+	.menu {
+		font-family: map-get($params, font-secondary);
+		color: map-get($params, color-menu-course);
+		margin: 20px, 0;
+		padding: map-get($params, padding-menu-block);
+		&--starter {
+			color: map-get($params, color-starter);
+		}
+		&--maincourse {
+			color: map-get($params, color-maincourse);
+		}
+		&--dessert {
+			color: map-get($params, color-dessert);
+		}
+		&__title {
+			font: map-get($params, font-size-menu-course);
+			letter-spacing: map-get($params, letter-spacing);
+			display: flex;
+			justify-content: space-between;
+			::after {
+				content: "";
+  				display: block;
+  				height: 3px;
+  				width: 0;
+  				transition: width 1s ease;
+			}
+			:hover::after {
+  				width: 100%;
+  				background: map-get($params, color-gradient);
+			}
+			&--line {
+				padding-top: map-get($params, padding-top-menu-line);
+				width: 150px;
+				height: 7px;
+			}
+		}
+		&__list {
+			padding: map-get($params, padding-menu-list);
+			&--food {
+				display: flex;
+				justify-content: space-between;
+				padding: map-get($params, padding-menu-food);
+				font-size: map-get($params, font-size-menu-food);
+				p:nth-child(2){
+					font-size: map-get($params, font-size-menu-price);
+					font-weight: bold;
+				}		
+			}
+		}
+	}
+
+	.restaurantmini{
+		font-family: map-get($params, font-primary);
+		color: map-get($params, color);
+		display: flex;
+		justify-content: center;
+		&--icone{
+			width: 40px;
+			height: 40px;
+		}
+		&--title{
+			padding-left: 10px;
+			font-size: 1.7em;
+		}
+	}
+}
 
 @mixin mobile-only {
-	@media screen and (max-device-width: 760px) {
+	@media screen and (max-device-width: 600px) {
 	@content;
 	}
 }
