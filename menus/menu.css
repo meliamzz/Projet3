@@ -94,7 +94,7 @@ a {
   font-size: 1.8em;
 }
 
-main h1 {
+h1 {
   font-family: "roboto";
   padding-bottom: 30px;
 }
@@ -129,7 +129,7 @@ main h1 {
   padding: 0 30px;
 }
 .menu1 .menu__title {
-  font: 1em;
+  font: 0.9em;
   display: flex;
   justify-content: space-between;
 }
