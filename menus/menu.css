@@ -114,8 +114,8 @@ a {
   padding: 30px 20px;
 }
 .menu1 .restaurant {
-  font-family: "Devonshire", cursive;
-  font-size: 2em;
+  font-family: "Devonshire", cursive, arial, sans-serif;
+  font-size: 2.3em;
   background: #3C1218 0% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -123,13 +123,13 @@ a {
   padding-top: 0;
 }
 .menu1 .menu {
-  font-family: "Kalam", cursive;
-  color: #3C1218;
+  font-family: "Kalam", cursive, arial, sans-serif;
+  color: inherit;
   margin: 20px, 0;
   padding: 0 30px;
 }
 .menu1 .menu__title {
-  font: 0.9em;
+  font: 1.1em;
   display: flex;
   justify-content: space-between;
 }
@@ -163,7 +163,7 @@ a {
   font-weight: bold;
 }
 .menu1 .restaurantmini {
-  font-family: "Devonshire", cursive;
+  font-family: "Devonshire", cursive, arial, sans-serif;
   color: #3C1218;
   display: flex;
   justify-content: center;
@@ -174,7 +174,7 @@ a {
 }
 .menu1 .restaurantmini--title {
   padding-left: 10px;
-  font-size: 1.8em;
+  font-size: 1.7em;
 }
 
 .menu2 section {
@@ -187,8 +187,8 @@ a {
   padding: 30px 20px;
 }
 .menu2 .restaurant {
-  font-family: "Croissant One", cursive;
-  font-size: 1.5em;
+  font-family: "Croissant One", cursive, arial, sans-serif;
+  font-size: 1.4em;
   background: -webkit-linear-gradient(45deg, #C67413 30%, #6e4ccc 60%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -196,7 +196,7 @@ a {
   padding-top: 40px;
 }
 .menu2 .menu {
-  font-family: "IBM Plex Serif", serif;
+  font-family: "IBM Plex Serif", serif, arial, sans-serif;
   color: #C67413;
   margin: 20px, 0;
 }
@@ -242,7 +242,7 @@ a {
   font-weight: bold;
 }
 .menu2 .restaurantmini {
-  font-family: "Croissant One", cursive;
+  font-family: "Croissant One", cursive, arial, sans-serif;
   color: #C67413;
   display: flex;
   justify-content: center;
@@ -253,7 +253,7 @@ a {
 }
 .menu2 .restaurantmini--title {
   padding-left: 10px;
-  font-size: 1.8em;
+  font-size: 1.7em;
 }
 
 .menu3 section {
@@ -266,7 +266,7 @@ a {
   padding: 30px 20px;
 }
 .menu3 .restaurant {
-  font-family: "Dancing Script", cursive;
+  font-family: "Dancing Script", cursive, arial, sans-serif;
   font-size: 2.5em;
   background: -webkit-linear-gradient(45deg, #0228DD 20%, #0887FB, #89C7F5 50%);
   -webkit-background-clip: text;
@@ -275,12 +275,12 @@ a {
   padding-top: 20px;
 }
 .menu3 .menu {
-  font-family: "Kalam", cursive;
+  font-family: "Kalam", cursive, arial, sans-serif;
   color: black;
   margin: 20px, 0;
 }
 .menu3 .menu__title {
-  font: 0.7em;
+  font: 1.1em;
   display: flex;
   justify-content: space-between;
 }
@@ -314,7 +314,7 @@ a {
   font-weight: bold;
 }
 .menu3 .restaurantmini {
-  font-family: "Dancing Script", cursive;
+  font-family: "Dancing Script", cursive, arial, sans-serif;
   color: #0887FB;
   display: flex;
   justify-content: center;
@@ -325,7 +325,7 @@ a {
 }
 .menu3 .restaurantmini--title {
   padding-left: 10px;
-  font-size: 1.8em;
+  font-size: 1.7em;
 }
 
 .menu4 section {
@@ -338,7 +338,7 @@ a {
   padding: 30px 20px;
 }
 .menu4 .restaurant {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Kaushan Script", cursive, arial, sans-serif;
   font-size: 2.5em;
   background: -webkit-linear-gradient(45deg, #3D9339 20%, #72BF56, #BFFF7E 50%);
   -webkit-background-clip: text;
@@ -347,12 +347,12 @@ a {
   padding-top: 20px;
 }
 .menu4 .menu {
-  font-family: "Kalam", cursive;
+  font-family: "Kalam", cursive, arial, sans-serif;
   color: black;
   margin: 20px, 0;
 }
 .menu4 .menu__title {
-  font: 0.7em;
+  font: 1.1em;
   display: flex;
   justify-content: space-between;
 }
@@ -386,7 +386,7 @@ a {
   font-weight: bold;
 }
 .menu4 .restaurantmini {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Kaushan Script", cursive, arial, sans-serif;
   color: #72BF56;
   display: flex;
   justify-content: center;
@@ -397,7 +397,7 @@ a {
 }
 .menu4 .restaurantmini--title {
   padding-left: 10px;
-  font-size: 1.8em;
+  font-size: 1.7em;
 }
 
 /*# sourceMappingURL=menu.css.map */
