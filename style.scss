@@ -12,6 +12,12 @@
 	@include menu-accueil($params);
 }
 
+.menu1 {
+	@include mobile-only {
+	$params: map-get($menuParams, menu1)
+	}
+}
+
 .menu2 {
 	$params: map-get($menuParams, menu2);
 	@include menu-accueil($params);

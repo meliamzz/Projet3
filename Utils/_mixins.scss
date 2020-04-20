@@ -7,8 +7,10 @@
     	margin: 25px;
     	background-color: map-get($params, bgcolor);
     	@include mobile-only {
-    		width: 200px;
-    		height: 280px;
+    		width: 330px*0.7;
+    		height: 460px*0.7;
+    		margin: 25px*0.7;
+
     	}
     	&__heading {
 
@@ -20,12 +22,20 @@
                 -webkit-text-fill-color: transparent;
            		margin: 0;
             	padding-top: map-get($params, padding-top-accueil);
+            	@include mobile-only {
+            		font-size: map-get($params, font-size-accueil-primary)*0.7;
+            		padding-top: map-get($params, padding-top-accueil)*0.7;
+            	}
         	}
         	&--secondary {
             	font-family: map-get($params, font-secondary);
             	font-size: map-get($params, font-size-accueil-secondary);
             	color: map-get($params,color);
             	margin: 20px, 0;
+            	@include mobile-only {
+            		font-size: map-get($params, font-size-accueil-secondary)*0.7;
+            		margin: 20px*0.7, 0;
+            	}
         	}
     	}
     	&--scale {
@@ -35,9 +45,19 @@
             	transform: scale(1.1);
             	opacity: 0.5;
         	}
+        	@include mobile-only {
+        		&:active {
+        			transition: 50s;
+            		transform: scale(1.1);
+            		opacity: 0.5;
+        		}
+        	}
     	}
     	&--img {
         	width: 50px;
+        	@include mobile-only {
+        		width: 50px*0.7;
+        	}
     	}
 	}
 }
@@ -138,7 +158,6 @@
 	@content;
 	}
 }
-
 
 
 
