@@ -87,6 +87,10 @@ a {
   text-decoration: none;
 }
 
+main {
+  margin-bottom: 100px;
+}
+
 .soon {
   display: flex;
   width: 300px;
@@ -225,10 +229,10 @@ section {
 .menu1 .menu__heading--primary {
   font-family: "Devonshire", cursive, arial, sans-serif;
   font-size: 2.3em;
-  background: #3C1218 0% 100%;
+  background: #3C1218;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 330px;
+  background-position: center;
   margin: 0;
 }
 .menu1 .menu__heading--secondary {
@@ -250,10 +254,10 @@ section {
   .menu1 .menu__heading--primary {
     font-family: "Devonshire", cursive, arial, sans-serif;
     font-size: 1.6em;
-    background: #3C1218 0% 100%;
+    background: #3C1218;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 330px;
+    background-position: center;
     margin: 0;
   }
   .menu1 .menu__heading--secondary {
@@ -279,7 +283,7 @@ section {
   background: -webkit-linear-gradient(280deg, #c77412 30%, #A56699 50%, #905bff 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 330px;
+  background-position: center;
   margin: 0;
 }
 .menu2 .menu__heading--secondary {
@@ -300,16 +304,16 @@ section {
   }
   .menu2 .menu__heading--primary {
     font-family: "Croissant One", cursive, arial, sans-serif;
-    font-size: 1.1em;
+    font-size: 1.6em;
     background: -webkit-linear-gradient(280deg, #c77412 30%, #A56699 50%, #905bff 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 330px;
+    background-position: center;
     margin: 0;
   }
   .menu2 .menu__heading--secondary {
     font-family: "IBM Plex Serif", serif, arial, sans-serif;
-    font-size: 1.4em;
+    font-size: 1.5em;
     color: #c77412;
     margin: 20px 0;
   }
@@ -330,7 +334,7 @@ section {
   background: -webkit-linear-gradient(45deg, #0228DD 20%, #0887FB 55%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 330px;
+  background-position: center;
   margin: 0;
 }
 .menu3 .menu__heading--secondary {
@@ -355,12 +359,12 @@ section {
     background: -webkit-linear-gradient(45deg, #0228DD 20%, #0887FB 55%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 330px;
+    background-position: center;
     margin: 0;
   }
   .menu3 .menu__heading--secondary {
     font-family: "Kalam", cursive;
-    font-size: 1.4em;
+    font-size: 1.5em;
     color: #0887FB;
     margin: 20px 0;
   }
@@ -381,7 +385,7 @@ section {
   background: -webkit-linear-gradient(45deg, #3D9339 20%, #72BF56, #BFFF7E 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 330px;
+  background-position: center;
   margin: 0;
 }
 .menu4 .menu__heading--secondary {
@@ -406,12 +410,12 @@ section {
     background: -webkit-linear-gradient(45deg, #3D9339 20%, #72BF56, #BFFF7E 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 330px;
+    background-position: center;
     margin: 0;
   }
   .menu4 .menu__heading--secondary {
     font-family: "Kalam", cursive;
-    font-size: 1.4em;
+    font-size: 1.5em;
     color: #72BF56;
     margin: 20px 0;
   }
