@@ -12,26 +12,15 @@
             	background: map-get($params, color-gradient);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+    			background-position: center;
                 margin: 0;
-            	
         	}
         	&--secondary {
             	font-family: map-get($params, font-secondary);
             	font-size: map-get($params, font-size-accueil-secondary);
             	color: map-get($params,color);
-            	margin: 15px 0;
+            	margin: 20px 0;
         	}
-    	}
-    	&--scale {
-    		height: 100%;
-        	&:hover {
-            	transition: 1s;
-            	transform: scale(1.1);
-            	opacity: 0.5;
-       		}
-       	}
-    	&--img {
-        	width: 50px;
     	}
 	}
 }
@@ -48,8 +37,10 @@
 		background: map-get($params, color-gradient);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
-		padding-bottom: map-get($params, padding-bottom-menu-resto);
-		padding-top: map-get($params, padding-top-menu-resto);
+                        
+                        background-position: center;
+		margin-bottom: map-get($params, margin-bottom-menu-resto);
+		margin-top: map-get($params, margin-top-menu-resto);
 	}
 
 	.menu {
@@ -70,8 +61,6 @@
 			color: map-get($params, color-dessert);
 		}
 		&__title {
-			font-size: map-get($params, font-size-menu-course);
-			font-weight: bold;
 			letter-spacing: map-get($params, letter-spacing);
 			display: flex;
 			justify-content: space-between;
@@ -86,14 +75,14 @@
   				width: 100%;
   				background: map-get($params, color-gradient);
 			}
+			&--name {
+				font-size: map-get($params, font-size-menu-course);
+				font-weight: bold;
+			}
 			&--line {
 				padding-top: map-get($params, padding-top-menu-line);
-				width: 140px;
-				height: 7px;
-				@include mobile-only {
-					width: 70px;
-					height: 2px;
-				}
+				width: map-get($params, width-menu-line);
+				height: map-get($params, height-menu-line);
 			}
 		}
 		&__list {
@@ -114,21 +103,14 @@
 		}
 	}
 
-	.restaurantmini{
+	.restaurantmini {
 		font-family: map-get($params, font-primary);
 		color: map-get($params, color);
 		display: flex;
 		justify-content: center;
-		&--icone{
-			width: 40px;
-			height: 40px;
-		}
-		&--title{
-			padding-left: 10px;
-			font-size: 1.7em;
-		}
 	}
 }
+
 
 @mixin mobile-only {
 	@media screen and (max-width: 599px) {
@@ -136,7 +118,11 @@
 	}
 }
 
-
+@mixin form-block ($width, $height) {
+		width: $width;
+    	height: $height;
+    	box-shadow: 5px 5px 5px $color-box-shadow , -5px -5px 5px $color-box-shadow;
+}
 
 
 
