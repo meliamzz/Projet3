@@ -8,14 +8,28 @@
     margin-bottom: 120px;
     background-color: $bgcolor-primary;
     color: $color-primary;
+    @include mobile-only {
+        width: 300px*0.7;
+        border-radius: 10px*0.7;
+        font-size: 1rem*0.7;
+        margin-bottom: 120px*0.7;
+    }
     &__title {
         margin: 0;
         padding: 10px 20px;
+        @include mobile-only{
+        padding: 10px*0.7 20px*0.7;
+        }
     }
     &__dot {
         font-size: 3em;
         line-height: 10px;
         padding-top: 13px;
+        @include mobile-only {
+        font-size: 3em*0.7;
+        line-height: 10px*0.7;
+        padding-top: 12px;
+        }
         &--dot1 {
             animation: soon-dot1 2s infinite;  
         }

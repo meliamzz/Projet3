@@ -1,41 +1,25 @@
 @mixin menu-accueil($params) {
 	.menu {
-    	width: 330px;
-    	height: 460px;
-    	box-shadow: 5px 5px 5px $color-box-shadow , -5px -5px 5px $color-box-shadow;
-    	display: inline-block;
-    	margin: 25px;
     	background-color: map-get($params, bgcolor);
-    	@include mobile-only {
-    		width: 330px*0.7;
-    		height: 460px*0.7;
-    		margin: 25px*0.7;
-
-    	}
     	&__heading {
-
+    		display: flex;
+    		flex-direction: column;
+    		justify-content: center;
+    		align-content: center;
         	&--primary {
             	font-family: map-get($params, font-primary);
             	font-size: map-get($params,font-size-accueil-primary);
             	background: map-get($params, color-gradient);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-           		margin: 0;
-            	padding-top: map-get($params, padding-top-accueil);
-            	@include mobile-only {
-            		font-size: map-get($params, font-size-accueil-primary)*0.7;
-            		padding-top: map-get($params, padding-top-accueil)*0.7;
-            	}
+                margin: 0;
+            	
         	}
         	&--secondary {
             	font-family: map-get($params, font-secondary);
             	font-size: map-get($params, font-size-accueil-secondary);
             	color: map-get($params,color);
-            	margin: 20px, 0;
-            	@include mobile-only {
-            		font-size: map-get($params, font-size-accueil-secondary)*0.7;
-            		margin: 20px*0.7, 0;
-            	}
+            	margin: 15px 0;
         	}
     	}
     	&--scale {
@@ -44,36 +28,18 @@
             	transition: 1s;
             	transform: scale(1.1);
             	opacity: 0.5;
-        	}
-        	@include mobile-only {
-        		&:active {
-        			transition: 50s;
-            		transform: scale(1.1);
-            		opacity: 0.5;
-        		}
-        	}
-    	}
+       		}
+       	}
     	&--img {
         	width: 50px;
-        	@include mobile-only {
-        		width: 50px*0.7;
-        	}
     	}
 	}
 }
 
 
-
-
 @mixin menu-block($params) {
 	section {
-		width: 500px;
-		height: 700px;
-		box-shadow: 5px 5px 5px $color-box-shadow , -5px -5px 5px $color-box-shadow;
 		background-color: map-get($params, bgcolor);
-		margin: auto;
-		margin-bottom: 100px;
-		padding: 30px 20px;	
 	}
 
 	.restaurant {
@@ -91,6 +57,9 @@
 		color: map-get($params, color-menu-course);
 		margin: 20px, 0;
 		padding: map-get($params, padding-menu-block);
+		@include mobile-only {
+			padding: 0;
+		}
 		&--starter {
 			color: map-get($params, color-starter);
 		}
@@ -101,7 +70,8 @@
 			color: map-get($params, color-dessert);
 		}
 		&__title {
-			font: map-get($params, font-size-menu-course);
+			font-size: map-get($params, font-size-menu-course);
+			font-weight: bold;
 			letter-spacing: map-get($params, letter-spacing);
 			display: flex;
 			justify-content: space-between;
@@ -118,8 +88,12 @@
 			}
 			&--line {
 				padding-top: map-get($params, padding-top-menu-line);
-				width: 150px;
+				width: 140px;
 				height: 7px;
+				@include mobile-only {
+					width: 70px;
+					height: 2px;
+				}
 			}
 		}
 		&__list {
@@ -129,6 +103,9 @@
 				justify-content: space-between;
 				padding: map-get($params, padding-menu-food);
 				font-size: map-get($params, font-size-menu-food);
+				@include mobile-only {
+					flex-direction: column;
+				}
 				p:nth-child(2){
 					font-size: map-get($params, font-size-menu-price);
 					font-weight: bold;
@@ -154,11 +131,10 @@
 }
 
 @mixin mobile-only {
-	@media screen and (max-device-width: 600px) {
+	@media screen and (max-width: 599px) {
 	@content;
 	}
 }
-
 
 
 

@@ -6,29 +6,58 @@
 @import "./Components/btn-soon";
 @import "./Pages/accueil";
 
+.menu {
+    	width: 330px;
+    	height: 460px;
+    	box-shadow: 5px 5px 5px $color-box-shadow , -5px -5px 5px $color-box-shadow;
+    	display: inline-block;
+    	margin: 25px;
+    	@include mobile-only {
+    	width: 260px;
+    	height: 360px;
+    	}
+}
+
+
 
 .menu1 {
 	$params: map-get($menuParams, menu1);
-	@include menu-accueil($params);
-}
-
-.menu1 {
-	@include mobile-only {
-	$params: map-get($menuParams, menu1)
-	}
+    $desktopParams: map-get($params, desktop);
+    $mobileParams: map-merge($desktopParams, map-get($params, mobile));
+    @include menu-accueil($desktopParams);
+    @include mobile-only {
+        @include menu-accueil($mobileParams);
+      }   
 }
 
 .menu2 {
 	$params: map-get($menuParams, menu2);
-	@include menu-accueil($params);
+    $desktopParams: map-get($params, desktop);
+    $mobileParams: map-merge($desktopParams, map-get($params, mobile));
+    @include menu-accueil($desktopParams);
+    @include mobile-only {
+        @include menu-accueil($mobileParams);
+      }   
 }
 
 .menu3 {
 	$params: map-get($menuParams, menu3);
-	@include menu-accueil($params);
+    $desktopParams: map-get($params, desktop);
+    $mobileParams: map-merge($desktopParams, map-get($params, mobile));
+    @include menu-accueil($desktopParams);
+    @include mobile-only {
+        @include menu-accueil($mobileParams);
+      }   
 }
 
 .menu4 {
 	$params: map-get($menuParams, menu4);
-	@include menu-accueil($params);
+    $desktopParams: map-get($params, desktop);
+    $mobileParams: map-merge($desktopParams, map-get($params, mobile));
+    @include menu-accueil($desktopParams);
+    @include mobile-only {
+        @include menu-accueil($mobileParams);
+      }   
 }
+
+

@@ -26,89 +26,139 @@ $menu3-font-primary: 'Dancing Script', cursive, arial, sans-serif;
 $menu4-font-primary: 'Kaushan Script', cursive, arial, sans-serif;
 $font-secondary:'Kalam', cursive;
 
+$ratio-mobile: 0.7;
 
 
 
 $menuParams: (
 	menu1: (
-		bgcolor: #FCDFDB,
-		color: $menu1-color,
-		color-menu-course: $menu1-color,
-		color-gradient: $menu1-color 0% 100%,
+		desktop: (
+			bgcolor: #FCDFDB,
+			color: $menu1-color,
+			color-menu-course: $menu1-color,
+			color-gradient: $menu1-color 0% 100%,
 
-		font-primary: $menu1-font-primary,
-		font-secondary: $font-secondary,
+			font-primary: $menu1-font-primary,
+			font-secondary: $font-secondary,
 
-		font-size-accueil-primary: 2.3em,
-		font-size-accueil-secondary: 2.5em,
-		font-size-menu-restaurant: 2.3em,
-		font-size-menu-course: 1.1em,
-		font-size-menu-food: 0.9em,
-		font-size-menu-price: 1.2em,
+			font-size-accueil-primary: 2.3em,
+			font-size-accueil-secondary: 2.5em,
+			font-size-menu-restaurant: 2em,
+			font-size-menu-course: 1.1em,
+			font-size-menu-food: 0.9em,
+			font-size-menu-price: 1.2em,
+		
 
-		padding-top-accueil: 120px,
-		padding-menu-block: 0 30px,
-		padding-bottom-menu-resto: 20px,
-		padding-top-menu-resto: 0,
-		padding-menu-list: 10px 0 25px 0,
-		padding-top-menu-line: 10px,
-		padding-menu-food: 2px 0
+			padding-menu-block: 0 30px,
+			padding-bottom-menu-resto: 20px,
+			padding-top-menu-resto: 0,
+			padding-menu-list: 10px 0 25px 0,
+			padding-top-menu-line: 12px,
+			padding-menu-food: 2px 0
+			),
+
+		mobile: (
+			font-size-accueil-primary: 1.6em,
+			font-size-accueil-secondary: 1.5em,
+			font-size-menu-restaurant: 1.6em,
+			font-size-menu-course: 0.8em,
+			font-size-menu-food: 0.6em,
+			font-size-menu-price: 0.8em,
+			padding-menu-block: 0 20px,
+			padding-bottom-menu-resto: 15px,
+			padding-top-menu-resto: 0,
+			padding-menu-list: 7px 0 17px 0,
+			padding-top-menu-line: 7px,
+			padding-menu-food: 1px 0
+		),
+			
 		),
 
-
-
 	menu2: (
-		bgcolor: #FFF5FE,
-		color: $menu2-color,
-		color-menu-course: $menu2-color,
-		color-maincourse: $menu2-color-secondary,
-		color-dessert: $menu2-color-tertiary,
-		color-gradient: -webkit-linear-gradient(45deg, $menu2-color 30%, $menu2-color-tertiary 60%),
+		desktop: (
+			bgcolor: #FFF5FE,
+			color: $menu2-color,
+			color-menu-course: $menu2-color,
+			color-maincourse: $menu2-color-secondary,
+			color-dessert: $menu2-color-tertiary,
+			color-gradient: -webkit-linear-gradient(45deg, $menu2-color 40%, $menu2-color-tertiary 70%),
 
-		font-primary: $menu2-font-primary,
-		font-secondary: $menu2-font-secondary,
+			font-primary: $menu2-font-primary,
+			font-secondary: $menu2-font-secondary,
 
-		font-size-accueil-primary: 1.4em,
-		font-size-accueil-secondary: 2em,
-		font-size-menu-restaurant: 1.4em,
-		font-size-menu-course: 0.8em bold,
-		font-size-menu-food: 0.8em,
-		font-size-menu-price: 1.1em,
+			font-size-accueil-primary: 1.4em,
+			font-size-accueil-secondary: 2em,
+			font-size-menu-restaurant: 1.4em,
+			font-size-menu-course: 0.8em,
+			font-size-menu-food: 0.8em,
+			font-size-menu-price: 1.1em,
 
-		padding-top-accueil: 180px,
-		padding-bottom-menu-resto: 60px,
-		padding-top-menu-resto: 40px,
-		padding-menu-list: 20px 40px 30px 40px,
-		padding-top-menu-line: 8px,
-		letter-spacing: 1px,
-		padding-menu-food: 7px 0,
+			
+			padding-bottom-menu-resto: 60px,
+			padding-top-menu-resto: 40px,
+			padding-menu-list: 20px 40px 30px 40px,
+			padding-top-menu-line: 8px,
+			letter-spacing: 1px,
+			padding-menu-food: 7px 0
+
+		),
+		mobile: (
+			font-size-accueil-primary: 1.1em,
+			font-size-accueil-secondary: 1.4em,
+			font-size-menu-restaurant: 1.6em,
+			font-size-menu-course: 0.8em,
+			font-size-menu-food: 0.6em,
+			font-size-menu-price: 0.8em,
+			padding-menu-block: 0 20px,
+			padding-bottom-menu-resto: 15px,
+			padding-top-menu-resto: 0,
+			padding-menu-list: 7px 0 17px 0,
+			padding-top-menu-line: 7px,
+			padding-menu-food: 1px 0
+			)
 		),
 
 	menu3: (
-		bgcolor: #EDEFEF,
-		color: $menu3-color,
-		color-menu-course: black,
-		color-gradient: -webkit-linear-gradient(45deg, $menu3-color-light 20%, $menu3-color, $menu3-color-dark 50%),
+		desktop: (
+			bgcolor: #EDEFEF,
+			color: $menu3-color,
+			color-menu-course: black,
+			color-gradient: -webkit-linear-gradient(45deg, $menu3-color-light 20%, $menu3-color, $menu3-color-dark 50%),
 
-		font-primary: $menu3-font-primary, 
-		font-secondary: $font-secondary,
+			font-primary: $menu3-font-primary, 
+			font-secondary: $font-secondary,
 
-		font-size-accueil-primary: 2em,
-		font-size-accueil-secondary: 2.5em,
-		font-size-menu-restaurant: 2.5em,
-		font-size-menu-course: 1.1em,
-		font-size-menu-food: 0.8em,
-		font-size-menu-price: 1.2em,
+			font-size-accueil-primary: 2em,
+			font-size-accueil-secondary: 2.5em,
+			font-size-menu-restaurant: 2.5em,
+			font-size-menu-course: 1.1em,
+			font-size-menu-food: 0.8em,
+			font-size-menu-price: 1.2em,
 
-		padding-top-accueil: 180px,
-		padding-bottom-menu-resto: 50px,
-		padding-top-menu-resto: 20px,
-		padding-menu-list: 10px 30px 25px 30px,
-		padding-top-menu-line: 10px,
-		padding-menu-food: 5px 0
+			padding-bottom-menu-resto: 50px,
+			padding-top-menu-resto: 20px,
+			padding-menu-list: 10px 30px 25px 30px,
+			padding-top-menu-line: 10px,
+			padding-menu-food: 5px 0
+		),
+		mobile: (
+			font-size-accueil-primary: 1.6em,
+			font-size-accueil-secondary: 1.4em,
+			font-size-menu-restaurant: 1.6em,
+			font-size-menu-course: 0.8em,
+			font-size-menu-food: 0.6em,
+			font-size-menu-price: 0.8em,
+			padding-menu-block: 0 20px,
+			padding-bottom-menu-resto: 15px,
+			padding-top-menu-resto: 0,
+			padding-menu-list: 7px 0 17px 0,
+			padding-top-menu-line: 7px,
+			padding-menu-food: 1px 0
+			)
 		),
 
 	menu4: (
+		desktop: (
 		bgcolor: #FDFFFD,
 		color: $menu4-color,
 		color-menu-course: black,
@@ -124,12 +174,27 @@ $menuParams: (
 		font-size-menu-food: 0.8em,
 		font-size-menu-price: 1.2em,
 
-		padding-top-accueil: 180px,
 		padding-bottom-menu-resto: 50px,
 		padding-top-menu-resto: 20px,
 		padding-menu-list: 10px 30px 25px 30px,
 		padding-top-menu-line: 10px,
 		padding-menu-food: 5px 0
-		)
-	);
+		
+		),
+		mobile: (
+			font-size-accueil-primary: 1.6em,
+			font-size-accueil-secondary: 1.4em,
+			font-size-menu-restaurant: 1.6em,
+			font-size-menu-course: 0.8em,
+			font-size-menu-food: 0.6em,
+			font-size-menu-price: 0.8em,
+			padding-menu-block: 0 20px,
+			padding-bottom-menu-resto: 15px,
+			padding-top-menu-resto: 0,
+			padding-menu-list: 7px 0 17px 0,
+			padding-top-menu-line: 7px,
+			padding-menu-food: 1px 0
+			)
+	)
+)
 
