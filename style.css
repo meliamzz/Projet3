@@ -193,6 +193,25 @@ section {
     height: 360px;
   }
 }
+.menu--scale {
+  height: 100%;
+}
+.menu--scale:hover {
+  transition: 1s;
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+@media screen and (max-width: 599px) {
+  .menu--scale:active {
+    transition: 1s;
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+}
+.menu--img {
+  width: 50px;
+  height: 50px;
+}
 
 .menu1 .menu {
   background-color: #FCDFDB;
@@ -209,24 +228,14 @@ section {
   background: #3C1218 0% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 330px;
   margin: 0;
 }
 .menu1 .menu__heading--secondary {
   font-family: "Kalam", cursive;
-  font-size: 2.5em;
+  font-size: 2.2em;
   color: #3C1218;
-  margin: 15px 0;
-}
-.menu1 .menu--scale {
-  height: 100%;
-}
-.menu1 .menu--scale:hover {
-  transition: 1s;
-  transform: scale(1.1);
-  opacity: 0.5;
-}
-.menu1 .menu--img {
-  width: 50px;
+  margin: 20px 0;
 }
 @media screen and (max-width: 599px) {
   .menu1 .menu {
@@ -244,24 +253,14 @@ section {
     background: #3C1218 0% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-size: 330px;
     margin: 0;
   }
   .menu1 .menu__heading--secondary {
     font-family: "Kalam", cursive;
     font-size: 1.5em;
     color: #3C1218;
-    margin: 15px 0;
-  }
-  .menu1 .menu--scale {
-    height: 100%;
-  }
-  .menu1 .menu--scale:hover {
-    transition: 1s;
-    transform: scale(1.1);
-    opacity: 0.5;
-  }
-  .menu1 .menu--img {
-    width: 50px;
+    margin: 20px 0;
   }
 }
 
@@ -277,27 +276,17 @@ section {
 .menu2 .menu__heading--primary {
   font-family: "Croissant One", cursive, arial, sans-serif;
   font-size: 1.4em;
-  background: -webkit-linear-gradient(45deg, #C67413 40%, #6e4ccc 70%);
+  background: -webkit-linear-gradient(280deg, #c77412 30%, #A56699 50%, #905bff 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 330px;
   margin: 0;
 }
 .menu2 .menu__heading--secondary {
   font-family: "IBM Plex Serif", serif, arial, sans-serif;
   font-size: 2em;
-  color: #C67413;
-  margin: 15px 0;
-}
-.menu2 .menu--scale {
-  height: 100%;
-}
-.menu2 .menu--scale:hover {
-  transition: 1s;
-  transform: scale(1.1);
-  opacity: 0.5;
-}
-.menu2 .menu--img {
-  width: 50px;
+  color: #c77412;
+  margin: 20px 0;
 }
 @media screen and (max-width: 599px) {
   .menu2 .menu {
@@ -312,27 +301,17 @@ section {
   .menu2 .menu__heading--primary {
     font-family: "Croissant One", cursive, arial, sans-serif;
     font-size: 1.1em;
-    background: -webkit-linear-gradient(45deg, #C67413 40%, #6e4ccc 70%);
+    background: -webkit-linear-gradient(280deg, #c77412 30%, #A56699 50%, #905bff 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-size: 330px;
     margin: 0;
   }
   .menu2 .menu__heading--secondary {
     font-family: "IBM Plex Serif", serif, arial, sans-serif;
     font-size: 1.4em;
-    color: #C67413;
-    margin: 15px 0;
-  }
-  .menu2 .menu--scale {
-    height: 100%;
-  }
-  .menu2 .menu--scale:hover {
-    transition: 1s;
-    transform: scale(1.1);
-    opacity: 0.5;
-  }
-  .menu2 .menu--img {
-    width: 50px;
+    color: #c77412;
+    margin: 20px 0;
   }
 }
 
@@ -348,27 +327,17 @@ section {
 .menu3 .menu__heading--primary {
   font-family: "Dancing Script", cursive, arial, sans-serif;
   font-size: 2em;
-  background: -webkit-linear-gradient(45deg, #0228DD 20%, #0887FB, #89C7F5 50%);
+  background: -webkit-linear-gradient(45deg, #0228DD 20%, #0887FB 55%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 330px;
   margin: 0;
 }
 .menu3 .menu__heading--secondary {
   font-family: "Kalam", cursive;
   font-size: 2.5em;
   color: #0887FB;
-  margin: 15px 0;
-}
-.menu3 .menu--scale {
-  height: 100%;
-}
-.menu3 .menu--scale:hover {
-  transition: 1s;
-  transform: scale(1.1);
-  opacity: 0.5;
-}
-.menu3 .menu--img {
-  width: 50px;
+  margin: 20px 0;
 }
 @media screen and (max-width: 599px) {
   .menu3 .menu {
@@ -383,27 +352,17 @@ section {
   .menu3 .menu__heading--primary {
     font-family: "Dancing Script", cursive, arial, sans-serif;
     font-size: 1.6em;
-    background: -webkit-linear-gradient(45deg, #0228DD 20%, #0887FB, #89C7F5 50%);
+    background: -webkit-linear-gradient(45deg, #0228DD 20%, #0887FB 55%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-size: 330px;
     margin: 0;
   }
   .menu3 .menu__heading--secondary {
     font-family: "Kalam", cursive;
     font-size: 1.4em;
     color: #0887FB;
-    margin: 15px 0;
-  }
-  .menu3 .menu--scale {
-    height: 100%;
-  }
-  .menu3 .menu--scale:hover {
-    transition: 1s;
-    transform: scale(1.1);
-    opacity: 0.5;
-  }
-  .menu3 .menu--img {
-    width: 50px;
+    margin: 20px 0;
   }
 }
 
@@ -419,27 +378,17 @@ section {
 .menu4 .menu__heading--primary {
   font-family: "Kaushan Script", cursive, arial, sans-serif;
   font-size: 2em;
-  background: -webkit-linear-gradient(45deg, #3D9339 20%, #72BF56, #BFFF7E 50%);
+  background: -webkit-linear-gradient(45deg, #3D9339 20%, #72BF56, #BFFF7E 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 330px;
   margin: 0;
 }
 .menu4 .menu__heading--secondary {
   font-family: "Kalam", cursive;
   font-size: 2.5em;
   color: #72BF56;
-  margin: 15px 0;
-}
-.menu4 .menu--scale {
-  height: 100%;
-}
-.menu4 .menu--scale:hover {
-  transition: 1s;
-  transform: scale(1.1);
-  opacity: 0.5;
-}
-.menu4 .menu--img {
-  width: 50px;
+  margin: 20px 0;
 }
 @media screen and (max-width: 599px) {
   .menu4 .menu {
@@ -454,27 +403,17 @@ section {
   .menu4 .menu__heading--primary {
     font-family: "Kaushan Script", cursive, arial, sans-serif;
     font-size: 1.6em;
-    background: -webkit-linear-gradient(45deg, #3D9339 20%, #72BF56, #BFFF7E 50%);
+    background: -webkit-linear-gradient(45deg, #3D9339 20%, #72BF56, #BFFF7E 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-size: 330px;
     margin: 0;
   }
   .menu4 .menu__heading--secondary {
     font-family: "Kalam", cursive;
     font-size: 1.4em;
     color: #72BF56;
-    margin: 15px 0;
-  }
-  .menu4 .menu--scale {
-    height: 100%;
-  }
-  .menu4 .menu--scale:hover {
-    transition: 1s;
-    transform: scale(1.1);
-    opacity: 0.5;
-  }
-  .menu4 .menu--img {
-    width: 50px;
+    margin: 20px 0;
   }
 }
 
