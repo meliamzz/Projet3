@@ -8,6 +8,9 @@
 .resto {
   font-family: 'roboto';
   padding-bottom: 30px;
+  @include mobile-only {
+    display: none;
+  }
 }
 
 * {
@@ -15,22 +18,63 @@
   padding: 0;
 }
 
+section {
+    @include form-block (500px, 700px);
+    margin: auto;
+    margin-bottom: 100px;
+    padding: 30px 20px;
+    @include mobile-only {
+      width: auto;
+      height: auto;
+      margin: 0 10px 100px 10px;
+      padding: 30px 10px;
+    }
+}
+
+.music-icone {
+  @include mobile-only {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .menu1 {
-  $params: map-get($menuParams, menu1);
-  @include menu-block($params);
+      $params: map-get($menuParams, menu1);
+      $desktopParams: map-get($params, desktop);
+      $mobileParams: map-merge($desktopParams, map-get($params, mobile));
+      @include menu-block($desktopParams);
+      @include mobile-only {
+        @include menu-block($mobileParams);
+      }   
 }
 
 .menu2 {
-  $params: map-get($menuParams, menu2);
-  @include menu-block($params);
+      $params: map-get($menuParams, menu2);
+      $desktopParams: map-get($params, desktop);
+      $mobileParams: map-merge($desktopParams, map-get($params, mobile));
+      @include menu-block($desktopParams);
+      @include mobile-only {
+        @include menu-block($mobileParams);
+      }   
+
 }
 
 .menu3 {
-  $params: map-get($menuParams, menu3);
-  @include menu-block($params);
+      $params: map-get($menuParams, menu3);
+      $desktopParams: map-get($params, desktop);
+      $mobileParams: map-merge($desktopParams, map-get($params, mobile));
+      @include menu-block($desktopParams);
+      @include mobile-only {
+        @include menu-block($mobileParams);
+      }   
 }
 
 .menu4 {
-  $params: map-get($menuParams, menu4);
-  @include menu-block($params);
+      $params: map-get($menuParams, menu4);
+      $desktopParams: map-get($params, desktop);
+      $mobileParams: map-merge($desktopParams, map-get($params, mobile));
+      @include menu-block($desktopParams);
+      @include mobile-only {
+        @include menu-block($mobileParams);
+      }   
 }
