@@ -87,10 +87,6 @@ a {
   text-decoration: none;
 }
 
-main {
-  margin-bottom: 100px;
-}
-
 .soon {
   display: flex;
   width: 300px;
@@ -304,7 +300,7 @@ section {
   }
   .menu2 .menu__heading--primary {
     font-family: "Croissant One", cursive, arial, sans-serif;
-    font-size: 1.6em;
+    font-size: 1.2em;
     background: -webkit-linear-gradient(280deg, #c77412 30%, #A56699 50%, #905bff 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
