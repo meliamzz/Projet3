@@ -1,3 +1,29 @@
+.heading {
+  width: 100%;
+  background-color: #579C87;
+  text-align: center;
+  font-family: "Work sans", arial, sans-serif;
+  border-bottom: solid 2px #A1C181;
+  font-size: 1.8em;
+  margin-bottom: 35px;
+}
+@media screen and (max-width: 599px) {
+  .heading {
+    font-size: 1.3em;
+  }
+}
+.heading--title {
+  margin: 0;
+  padding: 20px 0;
+}
+.heading--link {
+  color: #FDCB46;
+  letter-spacing: -3px;
+}
+.heading--link:hover {
+  text-shadow: #FC0 1px 0 10px;
+}
+
 .footer {
   display: flex;
   position: fixed;
@@ -51,32 +77,6 @@
     transform: rotate(0deg);
   }
 }
-.heading {
-  width: 100%;
-  background-color: #579C87;
-  text-align: center;
-  font-family: "Work sans", arial, sans-serif;
-  border-bottom: solid 2px #A1C181;
-  font-size: 1.8em;
-  margin-bottom: 35px;
-}
-@media screen and (max-width: 599px) {
-  .heading {
-    font-size: 1.3em;
-  }
-}
-.heading--title {
-  margin: 0;
-  padding: 20px 0;
-}
-.heading--link {
-  color: #FDCB46;
-  letter-spacing: -3px;
-}
-.heading--link:hover {
-  text-shadow: #FC0 1px 0 10px;
-}
-
 body {
   width: 100%;
   margin: auto;
@@ -139,10 +139,10 @@ a {
 
 @keyframes soon-dot1 {
   0% {
-    opacity: 1;
-  }
-  90% {
     opacity: 0;
+  }
+  30% {
+    opacity: 1;
   }
 }
 @keyframes soon-dot2 {
@@ -150,13 +150,10 @@ a {
     opacity: 0;
   }
   30% {
+    opacity: 0;
+  }
+  60% {
     opacity: 1;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
   }
 }
 @keyframes soon-dot3 {
@@ -164,16 +161,13 @@ a {
     opacity: 0;
   }
   60% {
-    opacity: 1;
-  }
-  90% {
     opacity: 0;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
-section {
+.align-menu {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 35px;
@@ -193,6 +187,18 @@ section {
     height: 360px;
   }
 }
+.menu__heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.menu__heading--primary {
+  margin: 0;
+}
+.menu__heading--secondary {
+  margin: 20px 0;
+}
 .menu--scale {
   height: 100%;
 }
@@ -200,13 +206,6 @@ section {
   transition: 1s;
   transform: scale(1.1);
   opacity: 0.5;
-}
-@media screen and (max-width: 599px) {
-  .menu--scale:active {
-    transition: 1s;
-    transform: scale(1.1);
-    opacity: 0.5;
-  }
 }
 .menu--img {
   width: 50px;
@@ -216,62 +215,31 @@ section {
 .menu1 .menu {
   background-color: #FCDFDB;
 }
-.menu1 .menu__heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-}
 .menu1 .menu__heading--primary {
   font-family: "Devonshire", cursive, arial, sans-serif;
   font-size: 2.3em;
   background: #3C1218;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-position: center;
-  margin: 0;
 }
 .menu1 .menu__heading--secondary {
-  font-family: "Kalam", cursive;
+  font-family: "Kalam", cursive, arial, sans-serif;
   font-size: 2.2em;
   color: #3C1218;
-  margin: 20px 0;
 }
 @media screen and (max-width: 599px) {
-  .menu1 .menu {
-    background-color: #FCDFDB;
-  }
-  .menu1 .menu__heading {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-  }
   .menu1 .menu__heading--primary {
-    font-family: "Devonshire", cursive, arial, sans-serif;
     font-size: 1.6em;
-    background: #3C1218;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-position: center;
-    margin: 0;
   }
   .menu1 .menu__heading--secondary {
-    font-family: "Kalam", cursive;
     font-size: 1.5em;
-    color: #3C1218;
-    margin: 20px 0;
   }
 }
 
 .menu2 .menu {
   background-color: #FFF5FE;
-}
-.menu2 .menu__heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
 }
 .menu2 .menu__heading--primary {
   font-family: "Croissant One", cursive, arial, sans-serif;
@@ -279,50 +247,25 @@ section {
   background: -webkit-linear-gradient(280deg, #c77412 30%, #A56699 50%, #905bff 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-position: center;
-  margin: 0;
 }
 .menu2 .menu__heading--secondary {
   font-family: "IBM Plex Serif", serif, arial, sans-serif;
   font-size: 2em;
   color: #c77412;
-  margin: 20px 0;
 }
 @media screen and (max-width: 599px) {
-  .menu2 .menu {
-    background-color: #FFF5FE;
-  }
-  .menu2 .menu__heading {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-  }
   .menu2 .menu__heading--primary {
-    font-family: "Croissant One", cursive, arial, sans-serif;
-    font-size: 1.2em;
-    background: -webkit-linear-gradient(280deg, #c77412 30%, #A56699 50%, #905bff 70%);
+    font-size: 1.1em;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-position: center;
-    margin: 0;
   }
   .menu2 .menu__heading--secondary {
-    font-family: "IBM Plex Serif", serif, arial, sans-serif;
     font-size: 1.5em;
-    color: #c77412;
-    margin: 20px 0;
   }
 }
 
 .menu3 .menu {
   background-color: #EDEFEF;
-}
-.menu3 .menu__heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
 }
 .menu3 .menu__heading--primary {
   font-family: "Dancing Script", cursive, arial, sans-serif;
@@ -330,50 +273,25 @@ section {
   background: -webkit-linear-gradient(45deg, #0228DD 20%, #0887FB 55%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-position: center;
-  margin: 0;
 }
 .menu3 .menu__heading--secondary {
-  font-family: "Kalam", cursive;
+  font-family: "Kalam", cursive, arial, sans-serif;
   font-size: 2.5em;
   color: #0887FB;
-  margin: 20px 0;
 }
 @media screen and (max-width: 599px) {
-  .menu3 .menu {
-    background-color: #EDEFEF;
-  }
-  .menu3 .menu__heading {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-  }
   .menu3 .menu__heading--primary {
-    font-family: "Dancing Script", cursive, arial, sans-serif;
     font-size: 1.6em;
-    background: -webkit-linear-gradient(45deg, #0228DD 20%, #0887FB 55%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-position: center;
-    margin: 0;
   }
   .menu3 .menu__heading--secondary {
-    font-family: "Kalam", cursive;
     font-size: 1.5em;
-    color: #0887FB;
-    margin: 20px 0;
   }
 }
 
 .menu4 .menu {
   background-color: #FDFFFD;
-}
-.menu4 .menu__heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
 }
 .menu4 .menu__heading--primary {
   font-family: "Kaushan Script", cursive, arial, sans-serif;
@@ -381,39 +299,20 @@ section {
   background: -webkit-linear-gradient(45deg, #3D9339 20%, #72BF56, #BFFF7E 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-position: center;
-  margin: 0;
 }
 .menu4 .menu__heading--secondary {
-  font-family: "Kalam", cursive;
+  font-family: "Kalam", cursive, arial, sans-serif;
   font-size: 2.5em;
   color: #72BF56;
-  margin: 20px 0;
 }
 @media screen and (max-width: 599px) {
-  .menu4 .menu {
-    background-color: #FDFFFD;
-  }
-  .menu4 .menu__heading {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-  }
   .menu4 .menu__heading--primary {
-    font-family: "Kaushan Script", cursive, arial, sans-serif;
     font-size: 1.6em;
-    background: -webkit-linear-gradient(45deg, #3D9339 20%, #72BF56, #BFFF7E 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-position: center;
-    margin: 0;
   }
   .menu4 .menu__heading--secondary {
-    font-family: "Kalam", cursive;
     font-size: 1.5em;
-    color: #72BF56;
-    margin: 20px 0;
   }
 }
 

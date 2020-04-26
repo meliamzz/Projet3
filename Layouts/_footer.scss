@@ -10,7 +10,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 1.3rem;
     @include mobile-only {
-    font-size: 1em;
+        font-size: 1em;
     }
     &__mentions {
         &--link {
@@ -25,11 +25,10 @@
         }
     }
     &--wiggle {
-    &:hover {
-    display: inline-block;
-    animation: wiggle 4s infinite;
-    }
-    
+        &:hover {
+            display: inline-block;
+            animation: wiggle 4s infinite;
+        }
     }
 }
 

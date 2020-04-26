@@ -43,39 +43,16 @@
 }
 
 @keyframes soon-dot1 {
-    0% {
-    opacity: 1;
-    }
-
-    90% {
-    opacity: 0;
-    }
-  }
+    0% {opacity: 0;}
+    30% {opacity: 1;}
+}
 @keyframes soon-dot2 {
-    0% {
-    opacity: 0;
-    }
-    30% {
-    opacity: 1;
-    }
-    90%{
-    opacity: 0;
-    }
-    100% {
-    opacity:0;
-    }
-  }
+    0% {opacity: 0;}
+    30% {opacity: 0;}
+    60%{opacity: 1;}
+}
 @keyframes soon-dot3 {
-    0% {
-    opacity: 0;
-    }
-    60% {
-    opacity: 1;
-    }
-    90% {
-    opacity:0;
-    }
-    100% {
-    opacity:0;
-    }
-  }
+    0% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity:1;}
+}

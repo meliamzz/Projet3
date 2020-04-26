@@ -87,10 +87,6 @@ a {
   text-decoration: none;
 }
 
-main {
-  margin-bottom: 100px;
-}
-
 .restaurantmini--icone {
   width: 40px;
   height: 40px;
@@ -143,6 +139,49 @@ section {
   }
 }
 
+.menu {
+  margin: 20px 0;
+}
+@media screen and (max-width: 599px) {
+  .menu {
+    padding: 0;
+  }
+}
+.menu__title {
+  display: flex;
+  justify-content: space-between;
+}
+.menu__title ::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  transition: width 1s ease;
+}
+.menu__title :hover::after {
+  width: 100%;
+}
+.menu__title--name {
+  font-weight: bold;
+}
+.menu__list--food {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 599px) {
+  .menu__list--food {
+    flex-direction: column;
+  }
+}
+.menu__list--food p:nth-child(2) {
+  font-weight: bold;
+}
+
+.restaurantmini {
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (max-width: 599px) {
   .music-icone {
     width: 40px;
@@ -164,34 +203,15 @@ section {
   margin-top: 0;
 }
 .menu1 .menu {
-  font-family: "Kalam", cursive;
+  font-family: "Kalam", cursive, arial, sans-serif;
   color: #3C1218;
-  margin: 20px, 0;
   padding: 0 30px;
 }
-@media screen and (max-width: 599px) {
-  .menu1 .menu {
-    padding: 0;
-  }
-}
-.menu1 .menu__title {
-  display: flex;
-  justify-content: space-between;
-}
-.menu1 .menu__title ::after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 0;
-  transition: width 1s ease;
-}
 .menu1 .menu__title :hover::after {
-  width: 100%;
   background: #3C1218;
 }
 .menu1 .menu__title--name {
   font-size: 1.1em;
-  font-weight: bold;
 }
 .menu1 .menu__title--line {
   padding-top: 12px;
@@ -202,106 +222,33 @@ section {
   padding: 10px 0 25px 0;
 }
 .menu1 .menu__list--food {
-  display: flex;
-  justify-content: space-between;
   padding: 2px 0;
   font-size: 0.9em;
 }
-@media screen and (max-width: 599px) {
-  .menu1 .menu__list--food {
-    flex-direction: column;
-  }
-}
 .menu1 .menu__list--food p:nth-child(2) {
   font-size: 1.2em;
-  font-weight: bold;
 }
 .menu1 .restaurantmini {
   font-family: "Devonshire", cursive, arial, sans-serif;
   color: #3C1218;
-  display: flex;
-  justify-content: center;
 }
 @media screen and (max-width: 599px) {
-  .menu1 section {
-    background-color: #FCDFDB;
-  }
   .menu1 .restaurant {
-    font-family: "Devonshire", cursive, arial, sans-serif;
-    font-size: 2em;
-    background: #3C1218;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-position: center;
     margin-bottom: 15px;
-    margin-top: 0;
   }
   .menu1 .menu {
-    font-family: "Kalam", cursive;
-    color: #3C1218;
-    margin: 20px, 0;
     padding: 0 10px;
   }
-}
-@media screen and (max-width: 599px) and (max-width: 599px) {
-  .menu1 .menu {
-    padding: 0;
-  }
-}
-@media screen and (max-width: 599px) {
-  .menu1 .menu__title {
-    display: flex;
-    justify-content: space-between;
-  }
-  .menu1 .menu__title ::after {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0;
-    transition: width 1s ease;
-  }
-  .menu1 .menu__title :hover::after {
-    width: 100%;
-    background: #3C1218;
-  }
-  .menu1 .menu__title--name {
-    font-size: 1.1em;
-    font-weight: bold;
-  }
   .menu1 .menu__title--line {
-    padding-top: 12px;
     width: 65px;
     height: 5px;
   }
-}
-@media screen and (max-width: 599px) {
-  .menu1 .menu__list {
-    padding: 10px 0 25px 0;
-  }
   .menu1 .menu__list--food {
-    display: flex;
-    justify-content: space-between;
     padding: 4px 0;
     font-size: 0.8em;
-  }
-}
-@media screen and (max-width: 599px) and (max-width: 599px) {
-  .menu1 .menu__list--food {
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 599px) {
-  .menu1 .menu__list--food p:nth-child(2) {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-}
-@media screen and (max-width: 599px) {
-  .menu1 .restaurantmini {
-    font-family: "Devonshire", cursive, arial, sans-serif;
-    color: #3C1218;
-    display: flex;
-    justify-content: center;
   }
 }
 
@@ -321,12 +268,6 @@ section {
 .menu2 .menu {
   font-family: "IBM Plex Serif", serif, arial, sans-serif;
   color: #c77412;
-  margin: 20px, 0;
-}
-@media screen and (max-width: 599px) {
-  .menu2 .menu {
-    padding: 0;
-  }
 }
 .menu2 .menu--maincourse {
   color: #A56699;
@@ -336,23 +277,12 @@ section {
 }
 .menu2 .menu__title {
   letter-spacing: 1px;
-  display: flex;
-  justify-content: space-between;
-}
-.menu2 .menu__title ::after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 0;
-  transition: width 1s ease;
 }
 .menu2 .menu__title :hover::after {
-  width: 100%;
   background: -webkit-linear-gradient(280deg, #c77412 30%, #A56699 50%, #905bff 70%);
 }
 .menu2 .menu__title--name {
   font-size: 0.8em;
-  font-weight: bold;
 }
 .menu2 .menu__title--line {
   padding-top: 6px;
@@ -363,116 +293,37 @@ section {
   padding: 20px 40px 30px 40px;
 }
 .menu2 .menu__list--food {
-  display: flex;
-  justify-content: space-between;
   padding: 7px 0;
   font-size: 0.8em;
 }
-@media screen and (max-width: 599px) {
-  .menu2 .menu__list--food {
-    flex-direction: column;
-  }
-}
 .menu2 .menu__list--food p:nth-child(2) {
   font-size: 1.1em;
-  font-weight: bold;
 }
 .menu2 .restaurantmini {
   font-family: "Croissant One", cursive, arial, sans-serif;
   color: #c77412;
-  display: flex;
-  justify-content: center;
 }
 @media screen and (max-width: 599px) {
-  .menu2 section {
-    background-color: #FFF5FE;
-  }
   .menu2 .restaurant {
-    font-family: "Croissant One", cursive, arial, sans-serif;
-    font-size: 1.4em;
-    background: -webkit-linear-gradient(280deg, #c77412 30%, #A56699 50%, #905bff 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-position: center;
     margin-bottom: 40px;
     margin-top: 15px;
   }
-  .menu2 .menu {
-    font-family: "IBM Plex Serif", serif, arial, sans-serif;
-    color: #c77412;
-    margin: 20px, 0;
-  }
-}
-@media screen and (max-width: 599px) and (max-width: 599px) {
-  .menu2 .menu {
-    padding: 0;
-  }
-}
-@media screen and (max-width: 599px) {
-  .menu2 .menu--maincourse {
-    color: #A56699;
-  }
-}
-@media screen and (max-width: 599px) {
-  .menu2 .menu--dessert {
-    color: #6e4ccc;
-  }
-}
-@media screen and (max-width: 599px) {
-  .menu2 .menu__title {
-    letter-spacing: 1px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .menu2 .menu__title ::after {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0;
-    transition: width 1s ease;
-  }
-  .menu2 .menu__title :hover::after {
-    width: 100%;
-    background: -webkit-linear-gradient(280deg, #c77412 30%, #A56699 50%, #905bff 70%);
-  }
   .menu2 .menu__title--name {
     font-size: 0.7em;
-    font-weight: bold;
   }
   .menu2 .menu__title--line {
     padding-top: 4px;
     width: 60px;
     height: 6px;
   }
-}
-@media screen and (max-width: 599px) {
   .menu2 .menu__list {
     padding: 20px 10px 30px 10px;
   }
   .menu2 .menu__list--food {
-    display: flex;
-    justify-content: space-between;
-    padding: 7px 0;
     font-size: 0.7em;
-  }
-}
-@media screen and (max-width: 599px) and (max-width: 599px) {
-  .menu2 .menu__list--food {
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 599px) {
-  .menu2 .menu__list--food p:nth-child(2) {
-    font-size: 1.1em;
-    font-weight: bold;
-  }
-}
-@media screen and (max-width: 599px) {
-  .menu2 .restaurantmini {
-    font-family: "Croissant One", cursive, arial, sans-serif;
-    color: #c77412;
-    display: flex;
-    justify-content: center;
   }
 }
 
@@ -490,33 +341,14 @@ section {
   margin-top: 20px;
 }
 .menu3 .menu {
-  font-family: "Kalam", cursive;
+  font-family: "Kalam", cursive, arial, sans-serif;
   color: black;
-  margin: 20px, 0;
-}
-@media screen and (max-width: 599px) {
-  .menu3 .menu {
-    padding: 0;
-  }
-}
-.menu3 .menu__title {
-  display: flex;
-  justify-content: space-between;
-}
-.menu3 .menu__title ::after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 0;
-  transition: width 1s ease;
 }
 .menu3 .menu__title :hover::after {
-  width: 100%;
   background: -webkit-linear-gradient(45deg, #0228DD 20%, #0887FB 55%);
 }
 .menu3 .menu__title--name {
   font-size: 1em;
-  font-weight: bold;
 }
 .menu3 .menu__title--line {
   padding-top: 10px;
@@ -527,105 +359,34 @@ section {
   padding: 10px 30px 25px 30px;
 }
 .menu3 .menu__list--food {
-  display: flex;
-  justify-content: space-between;
   padding: 5px 0;
   font-size: 0.8em;
 }
-@media screen and (max-width: 599px) {
-  .menu3 .menu__list--food {
-    flex-direction: column;
-  }
-}
 .menu3 .menu__list--food p:nth-child(2) {
   font-size: 1.2em;
-  font-weight: bold;
 }
 .menu3 .restaurantmini {
   font-family: "Dancing Script", cursive, arial, sans-serif;
   color: #0887FB;
-  display: flex;
-  justify-content: center;
 }
 @media screen and (max-width: 599px) {
-  .menu3 section {
-    background-color: #EDEFEF;
-  }
   .menu3 .restaurant {
-    font-family: "Dancing Script", cursive, arial, sans-serif;
     font-size: 2em;
-    background: -webkit-linear-gradient(45deg, #0228DD 20%, #0887FB 55%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-position: center;
     margin-bottom: 40px;
     margin-top: 10px;
   }
-  .menu3 .menu {
-    font-family: "Kalam", cursive;
-    color: black;
-    margin: 20px, 0;
-  }
-}
-@media screen and (max-width: 599px) and (max-width: 599px) {
-  .menu3 .menu {
-    padding: 0;
-  }
-}
-@media screen and (max-width: 599px) {
-  .menu3 .menu__title {
-    display: flex;
-    justify-content: space-between;
-  }
-  .menu3 .menu__title ::after {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0;
-    transition: width 1s ease;
-  }
-  .menu3 .menu__title :hover::after {
-    width: 100%;
-    background: -webkit-linear-gradient(45deg, #0228DD 20%, #0887FB 55%);
-  }
-  .menu3 .menu__title--name {
-    font-size: 1em;
-    font-weight: bold;
-  }
   .menu3 .menu__title--line {
-    padding-top: 10px;
     width: 65px;
     height: 5px;
   }
-}
-@media screen and (max-width: 599px) {
   .menu3 .menu__list {
     padding: 10px 10px 25px 10px;
   }
   .menu3 .menu__list--food {
-    display: flex;
-    justify-content: space-between;
     padding: 7px 0;
-    font-size: 0.8em;
-  }
-}
-@media screen and (max-width: 599px) and (max-width: 599px) {
-  .menu3 .menu__list--food {
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 599px) {
-  .menu3 .menu__list--food p:nth-child(2) {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-}
-@media screen and (max-width: 599px) {
-  .menu3 .restaurantmini {
-    font-family: "Dancing Script", cursive, arial, sans-serif;
-    color: #0887FB;
-    display: flex;
-    justify-content: center;
   }
 }
 
@@ -643,33 +404,14 @@ section {
   margin-top: 20px;
 }
 .menu4 .menu {
-  font-family: "Kalam", cursive;
+  font-family: "Kalam", cursive, arial, sans-serif;
   color: black;
-  margin: 20px, 0;
-}
-@media screen and (max-width: 599px) {
-  .menu4 .menu {
-    padding: 0;
-  }
-}
-.menu4 .menu__title {
-  display: flex;
-  justify-content: space-between;
-}
-.menu4 .menu__title ::after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 0;
-  transition: width 1s ease;
 }
 .menu4 .menu__title :hover::after {
-  width: 100%;
   background: -webkit-linear-gradient(45deg, #3D9339 20%, #72BF56, #BFFF7E 70%);
 }
 .menu4 .menu__title--name {
   font-size: 1em;
-  font-weight: bold;
 }
 .menu4 .menu__title--line {
   padding-top: 10px;
@@ -680,105 +422,34 @@ section {
   padding: 10px 30px 25px 30px;
 }
 .menu4 .menu__list--food {
-  display: flex;
-  justify-content: space-between;
   padding: 5px 0;
   font-size: 0.8em;
 }
-@media screen and (max-width: 599px) {
-  .menu4 .menu__list--food {
-    flex-direction: column;
-  }
-}
 .menu4 .menu__list--food p:nth-child(2) {
   font-size: 1.2em;
-  font-weight: bold;
 }
 .menu4 .restaurantmini {
   font-family: "Kaushan Script", cursive, arial, sans-serif;
   color: #72BF56;
-  display: flex;
-  justify-content: center;
 }
 @media screen and (max-width: 599px) {
-  .menu4 section {
-    background-color: #FDFFFD;
-  }
   .menu4 .restaurant {
-    font-family: "Kaushan Script", cursive, arial, sans-serif;
     font-size: 2em;
-    background: -webkit-linear-gradient(45deg, #3D9339 20%, #72BF56, #BFFF7E 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-position: center;
     margin-bottom: 40px;
     margin-top: 10px;
   }
-  .menu4 .menu {
-    font-family: "Kalam", cursive;
-    color: black;
-    margin: 20px, 0;
-  }
-}
-@media screen and (max-width: 599px) and (max-width: 599px) {
-  .menu4 .menu {
-    padding: 0;
-  }
-}
-@media screen and (max-width: 599px) {
-  .menu4 .menu__title {
-    display: flex;
-    justify-content: space-between;
-  }
-  .menu4 .menu__title ::after {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0;
-    transition: width 1s ease;
-  }
-  .menu4 .menu__title :hover::after {
-    width: 100%;
-    background: -webkit-linear-gradient(45deg, #3D9339 20%, #72BF56, #BFFF7E 70%);
-  }
-  .menu4 .menu__title--name {
-    font-size: 1em;
-    font-weight: bold;
-  }
   .menu4 .menu__title--line {
-    padding-top: 10px;
     width: 70px;
     height: 5px;
   }
-}
-@media screen and (max-width: 599px) {
   .menu4 .menu__list {
     padding: 10px 10px 25px 10px;
   }
   .menu4 .menu__list--food {
-    display: flex;
-    justify-content: space-between;
     padding: 7px 0;
-    font-size: 0.8em;
-  }
-}
-@media screen and (max-width: 599px) and (max-width: 599px) {
-  .menu4 .menu__list--food {
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 599px) {
-  .menu4 .menu__list--food p:nth-child(2) {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-}
-@media screen and (max-width: 599px) {
-  .menu4 .restaurantmini {
-    font-family: "Kaushan Script", cursive, arial, sans-serif;
-    color: #72BF56;
-    display: flex;
-    justify-content: center;
   }
 }
 

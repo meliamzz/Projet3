@@ -1,4 +1,4 @@
-section {
+.align-menu {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 35px;
@@ -6,38 +6,43 @@ section {
 }
 
 .menu {
-    	@include form-block (330px, 460px);
-    	display: inline-block;
-    	margin: 25px;
-    	@include mobile-only {
-    	width: 260px;
-    	height: 360px;
-    	}
-        &--scale {
-            height: 100%;
-            &:hover {
-                transition: 1s;
-                transform: scale(1.1);
-                opacity: 0.5;
-            }
-            @include mobile-only {
-                    &:active {
-                        transition: 1s;
-                        transform: scale(1.1);
-                        opacity: 0.5;
-                    }
-                }
+    @include form-block (330px, 460px);
+    display: inline-block;
+    margin: 25px;
+    @include mobile-only {
+        width: 260px;
+        height: 360px;
+    }
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        &--primary {
+            margin: 0;
         }
-        &--img {
-            width: 50px;
-            height: 50px;
+        &--secondary {
+            margin: 20px 0;
         }
+    }
+    &--scale {
+        height: 100%;
+        &:hover {
+            transition: 1s;
+            transform: scale(1.1);
+            opacity: 0.5;
+        }
+    }
+    &--img {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 .menu1 {
 	$params: map-get($menuParams, menu1);
     $desktopParams: map-get($params, desktop);
-    $mobileParams: map-merge($desktopParams, map-get($params, mobile));
+    $mobileParams: map-get($params, mobile);
     @include menu-accueil($desktopParams);
     @include mobile-only {
         @include menu-accueil($mobileParams);
@@ -47,7 +52,7 @@ section {
 .menu2 {
 	$params: map-get($menuParams, menu2);
     $desktopParams: map-get($params, desktop);
-    $mobileParams: map-merge($desktopParams, map-get($params, mobile));
+    $mobileParams: map-get($params, mobile);
     @include menu-accueil($desktopParams);
     @include mobile-only {
         @include menu-accueil($mobileParams);
@@ -57,7 +62,7 @@ section {
 .menu3 {
 	$params: map-get($menuParams, menu3);
     $desktopParams: map-get($params, desktop);
-    $mobileParams: map-merge($desktopParams, map-get($params, mobile));
+    $mobileParams: map-get($params, mobile);
     @include menu-accueil($desktopParams);
     @include mobile-only {
         @include menu-accueil($mobileParams);
@@ -67,10 +72,9 @@ section {
 .menu4 {
 	$params: map-get($menuParams, menu4);
     $desktopParams: map-get($params, desktop);
-    $mobileParams: map-merge($desktopParams, map-get($params, mobile));
+    $mobileParams: map-get($params, mobile);
     @include menu-accueil($desktopParams);
     @include mobile-only {
         @include menu-accueil($mobileParams);
       }   
 }
-

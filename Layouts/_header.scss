@@ -9,7 +9,6 @@
     @include mobile-only {
         font-size: 1.3em;
     }
-
     &--title {
         margin: 0;
         padding: 20px 0;
@@ -18,9 +17,7 @@
         color: $color-primary;
         letter-spacing: -3px;
         &:hover{
-        text-shadow: #FC0 1px 0 10px;   
+            text-shadow: #FC0 1px 0 10px;   
         }
-       
-    
     }
 }
